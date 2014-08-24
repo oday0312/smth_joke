@@ -44,11 +44,6 @@ import java.util.ArrayList;
  */
 public class baseMenuActivity3  extends SherlockActivity implements ISideNavigationCallback {
 
-    public static final String EXTRA_TITLE = "com.devspark.sidenavigation.yeeyanAndroid.extra.MTGOBJECT";
-    public static final String EXTRA_RESOURCE_ID = "com.devspark.sidenavigation.yeeyanAndroid.extra.RESOURCE_ID";
-    public static final String EXTRA_MODE = "com.devspark.sidenavigation.yeeyanAndroid.extra.MODE";
-    public static final String EXTRA_WEBURL = "com.devspark.sidenavigation.yeeyanAndroid.extra.weburl";
-
 
     public String BaseUrl = "";
 
@@ -131,12 +126,12 @@ public class baseMenuActivity3  extends SherlockActivity implements ISideNavigat
         progressBar =  (ProgressBar)findViewById(R.id.myprogressBar);
         progressBar.setVisibility(View.INVISIBLE);
 
-        if (getIntent().hasExtra(EXTRA_TITLE)) {
-            String title = getIntent().getStringExtra(EXTRA_TITLE);
-            int resId = getIntent().getIntExtra(EXTRA_RESOURCE_ID, 0);
+        if (getIntent().hasExtra(Utils.EXTRA_TITLE)) {
+            String title = getIntent().getStringExtra(Utils.EXTRA_TITLE);
+            int resId = getIntent().getIntExtra(Utils.EXTRA_RESOURCE_ID, 0);
             setTitle(title);
             //icon.setImageResource(resId);
-            sideNavigationView.setMode(getIntent().getIntExtra(EXTRA_MODE, 0) == 0 ? SideNavigationView.Mode.LEFT : SideNavigationView.Mode.RIGHT);
+            sideNavigationView.setMode(getIntent().getIntExtra(Utils.EXTRA_MODE, 0) == 0 ? SideNavigationView.Mode.LEFT : SideNavigationView.Mode.RIGHT);
         }
 
 
@@ -285,7 +280,7 @@ public class baseMenuActivity3  extends SherlockActivity implements ISideNavigat
     public void startWebViewActivity(String urlString)
     {
         Intent intent = new Intent(this, webViewActivity.class);
-        intent.putExtra(EXTRA_WEBURL, urlString);
+        intent.putExtra(Utils.EXTRA_WEBURL, urlString);
 
         // all of the other activities on top of it will be closed and this
         // Intent will be delivered to the (now on top) old activity as a
@@ -378,54 +373,18 @@ public class baseMenuActivity3  extends SherlockActivity implements ISideNavigat
      * @param resId resource if of background image
      */
     protected void invokeActivity(String title, int resId) {
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra(EXTRA_TITLE, title);
-        intent.putExtra(EXTRA_RESOURCE_ID, resId);
-        intent.putExtra(EXTRA_MODE, sideNavigationView.getMode() == SideNavigationView.Mode.LEFT ? 0 : 1);
 
-        // all of the other activities on top of it will be closed and this
-        // Intent will be delivered to the (now on top) old activity as a
-        // new Intent.
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-
-        startActivity(intent);
-        // no animation of transition
-        overridePendingTransition(0, 0);
     }
 
 
     protected void invokeActivity1(String title, int resId ) {
 
-        Intent intent = new Intent(this, BaseMenuActivity.class);
-        intent.putExtra(EXTRA_TITLE, title);
-        intent.putExtra(EXTRA_RESOURCE_ID, resId);
-        intent.putExtra(EXTRA_MODE, sideNavigationView.getMode() == SideNavigationView.Mode.LEFT ? 0 : 1);
 
-        // all of the other activities on top of it will be closed and this
-        // Intent will be delivered to the (now on top) old activity as a
-        // new Intent.
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-
-        startActivity(intent);
-        // no animation of transition
-        overridePendingTransition(0, 0);
     }
 
     protected void invokeActivity2(String title, int resId ) {
 
-        Intent intent = new Intent(this, baseMenuActivity2.class);
-        intent.putExtra(EXTRA_TITLE, title);
-        intent.putExtra(EXTRA_RESOURCE_ID, resId);
-        intent.putExtra(EXTRA_MODE, sideNavigationView.getMode() == SideNavigationView.Mode.LEFT ? 0 : 1);
 
-        // all of the other activities on top of it will be closed and this
-        // Intent will be delivered to the (now on top) old activity as a
-        // new Intent.
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-
-        startActivity(intent);
-        // no animation of transition
-        overridePendingTransition(0, 0);
     }
     protected void invokeActivity3(String title, int resId ) {
 
@@ -433,36 +392,12 @@ public class baseMenuActivity3  extends SherlockActivity implements ISideNavigat
     }
     public void invokeActivity4(String title, int resId ) {
 
-        Intent intent = new Intent(this, baseMenuActivity4.class);
-        intent.putExtra(EXTRA_TITLE, title);
-        intent.putExtra(EXTRA_RESOURCE_ID, resId);
-        intent.putExtra(EXTRA_MODE, sideNavigationView.getMode() == SideNavigationView.Mode.LEFT ? 0 : 1);
 
-        // all of the other activities on top of it will be closed and this
-        // Intent will be delivered to the (now on top) old activity as a
-        // new Intent.
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-
-        startActivity(intent);
-        // no animation of transition
-        overridePendingTransition(0, 0);
     }
 
     public void invokeActivity5(String title, int resId ) {
 
-        Intent intent = new Intent(this, baseMenuActivity5.class);
-        intent.putExtra(EXTRA_TITLE, title);
-        intent.putExtra(EXTRA_RESOURCE_ID, resId);
-        intent.putExtra(EXTRA_MODE, sideNavigationView.getMode() == SideNavigationView.Mode.LEFT ? 0 : 1);
 
-        // all of the other activities on top of it will be closed and this
-        // Intent will be delivered to the (now on top) old activity as a
-        // new Intent.
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-
-        startActivity(intent);
-        // no animation of transition
-        overridePendingTransition(0, 0);
     }
 
 

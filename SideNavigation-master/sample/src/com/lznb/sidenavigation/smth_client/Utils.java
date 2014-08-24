@@ -32,6 +32,13 @@ import java.util.regex.Pattern;
  * To change this template use File | Settings | File Templates.
  */
 public class Utils  {
+
+    public static final String EXTRA_TITLE = "com.devspark.sidenavigation.yeeyanAndroid.extra.MTGOBJECT";
+    public static final String EXTRA_RESOURCE_ID = "com.devspark.sidenavigation.yeeyanAndroid.extra.RESOURCE_ID";
+    public static final String EXTRA_MODE = "com.devspark.sidenavigation.yeeyanAndroid.extra.MODE";
+    public static final String EXTRA_WEBURL = "com.devspark.sidenavigation.yeeyanAndroid.extra.weburl";
+
+
     private Utils(){
 
     }

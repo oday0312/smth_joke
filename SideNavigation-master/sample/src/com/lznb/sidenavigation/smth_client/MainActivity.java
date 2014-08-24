@@ -38,11 +38,7 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 
-/**
- * 
- * @author e.shishkin
- * 
- */
+
 public class MainActivity extends SherlockActivity implements ISideNavigationCallback {
 
     public static final String EXTRA_TITLE = "com.devspark.sidenavigation.yeeyanAndroid.extra.MTGOBJECT";
