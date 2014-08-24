@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"  >
+
+    <RelativeLayout
+            android:id="@+id/secondlevellayout"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp" android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" android:layout_marginTop="0dp"
+
+            >
+        <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:id="@+id/bottomBackground" android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
+                android:layout_alignParentTop="true" android:layout_marginTop="74dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/abs__ab_bottom_solid_inverse_holo"/>
+        <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:descendantFocusability="blocksDescendants"
+                android:id="@+id/listImageView" android:layout_alignParentLeft="true" android:layout_marginLeft="12dp"
+                android:layout_alignParentTop="true" android:layout_marginTop="12dp"
+                android:src="@drawable/ic_launcher"/>
+        <TextView
+                android:layout_width="313dp"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:text="hello world title"
+                android:id="@+id/listTitle"
+                android:layout_alignParentLeft="true" android:layout_marginLeft="116dp"
+                android:layout_marginTop="8dp" android:phoneNumber="false" android:maxLines="1"
+                android:gravity="center_horizontal"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="69dp"
+                android:text="content"
+                android:id="@+id/listContent"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_below="@+id/listTitle" android:layout_alignRight="@+id/bottomBackground"
+                android:layout_toRightOf="@+id/listImageView" android:textSize="10dp" android:maxLines="3"/>
+    </RelativeLayout>
+</RelativeLayout>

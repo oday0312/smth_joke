@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">水木社区DIY</string>
+    <string name="title1">译言精选-社会</string>
+    <string name="title2">译言精选-科技</string>
+    <string name="title3">译言精选-生活</string>
+    <string name="title4">译言精选-经济</string>
+    <string name="title5">译言精选-文化</string>
+
+    <string name="mode">视图模式</string>
+    <string name="mode_left">左</string>
+    <string name="mode_right">右</string>
+    <string name="image_desc">Image</string>
+
+
+    <string name="hello">Hello World, LoadMoreListView!</string>
+    <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+
+
+</resources>
